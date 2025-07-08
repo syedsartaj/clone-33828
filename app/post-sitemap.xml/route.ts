@@ -27,10 +27,11 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${rows
   .map(row => {
-    const [id, , , , , , , , , , , , robottxt_publish_date] = row;
+    const [id, , , , , , , , , , , , robottxt_publish_date,title] = row;
+    const editedTitle = title.toLowerCase().replace(/\s+/g, '-');
     return `
   <url>
-    <loc>${baseUrl}/blogpage?id=${encodeURIComponent(id)}</loc>
+    <loc>${baseUrl}/${editedtitle}</loc>
     <lastmod>${new Date(robottxt_publish_date || new Date()).toISOString()}</lastmod>
   </url>`;
   })
