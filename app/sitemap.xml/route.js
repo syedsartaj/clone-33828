@@ -6,11 +6,11 @@ export async function GET() {
 
   const urls = [
     {
-      loc: `/post-sitemap.xml`,
+      loc: `${baseUrl}/post-sitemap.xml`,
       lastmod: '2025-06-25T11:11:00+00:00',
     },
     {
-      loc: `/page-sitemap.xml`,
+      loc: `${baseUrl}/page-sitemap.xml`,
       lastmod: '2025-06-19T12:09:00+00:00',
     },
     // {
