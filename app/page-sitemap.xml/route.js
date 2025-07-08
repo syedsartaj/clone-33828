@@ -11,7 +11,7 @@ export async function GET() {
   ${pages
     .map(
       path => `<url>
-    <loc>/${path}</loc>
+    <loc>${baseUrl}/${path}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
   </url>`
     )
