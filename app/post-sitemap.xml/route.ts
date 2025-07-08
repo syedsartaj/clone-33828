@@ -31,7 +31,7 @@ ${rows
     const editedTitle = title.toLowerCase().replace(/\s+/g, '-');
     return `
   <url>
-    <loc>${baseUrl}/${editedtitle}</loc>
+    <loc>${baseUrl}/${editedTitle}</loc>
     <lastmod>${new Date(robottxt_publish_date || new Date()).toISOString()}</lastmod>
   </url>`;
   })
