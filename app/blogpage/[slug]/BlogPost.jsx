@@ -12,19 +12,19 @@ const BlogPost = () => {
 const params = useParams();
 const slug = params?.slug; // this will be 'a-comprehensive-analysis-of-the-israel-vs-iran-conflict'
 
-  useEffect(() => {
-    const id = localStorage.getItem('blogId');
-    if (id) {
-      setBlogId(id);
-      console.log(id,'here');
-      // fetch blog data using `id` if needed
-    }
-  }, []);
-
-  const { sheetData, loading } = useData();
+  // useEffect(() => {
+  //   const id = localStorage.getItem('blogId');
+  //   if (id) {
+  //     setBlogId(id);
+  //     console.log(id,'here');
+  //     // fetch blog data using `id` if needed
+  //   }
+  // }, []);
   // const searchParams = useSearchParams();
   // const selectedId = searchParams.get('id');
-const blogPost = sheetData.find(post => post.slug === slug);
+
+  const { sheetData, loading } = useData();
+  const blogPost = sheetData.find(post => post.slug === slug);
 
   //const blogPost = sheetData.find(post => post.id === blogId);
 
