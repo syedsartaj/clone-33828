@@ -1,5 +1,5 @@
 'use client';
-
+import { useParams } from 'next/navigation';
 import React from 'react';
 import { useEffect,useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -8,7 +8,9 @@ import Navbar from '../../components/Navbar';
 import Footerfour from '../../components/Footerfour';
 
 const BlogPost = () => {
-    const [blogId, setBlogId] = useState(null);
+
+const params = useParams();
+const slug = params?.slug; // this will be 'a-comprehensive-analysis-of-the-israel-vs-iran-conflict'
 
   useEffect(() => {
     const id = localStorage.getItem('blogId');
@@ -20,10 +22,11 @@ const BlogPost = () => {
   }, []);
 
   const { sheetData, loading } = useData();
-  const searchParams = useSearchParams();
-  const selectedId = searchParams.get('id');
+  // const searchParams = useSearchParams();
+  // const selectedId = searchParams.get('id');
+const blogPost = sheetData.find(post => post.slug === slug);
 
-  const blogPost = sheetData.find(post => post.id === blogId);
+  //const blogPost = sheetData.find(post => post.id === blogId);
 
   return (
     <div className="bg-gray-100 text-gray-900 min-h-screen">
