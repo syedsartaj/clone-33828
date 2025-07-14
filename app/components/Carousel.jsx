@@ -23,7 +23,7 @@ const Carousel = ({ title, posts }) => {
 
 const handleCardClick = (post) => {
   const id = post.id || post.link;
-  const keyword = post.title?.toLowerCase().replace(/\s+/g, '-'); // 👈 Replace spaces with hyphens
+  const keyword = post.slug; // 👈 Replace spaces with hyphens
   if (id && keyword) {
     localStorage.setItem('blogId', id); // 👈 store the id in sessionStorage
     router.push(`/blogpage/${encodeURIComponent(keyword)}`);
