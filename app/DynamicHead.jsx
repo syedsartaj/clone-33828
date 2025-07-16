@@ -20,6 +20,19 @@ export default function DynamicHead() {
       <meta name="description" content={companySlogan} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="https://i.postimg.cc/cLjLPgpD/Chat-GPT-Image-Jul-9-2025-01-34-08-AM.png" />
-    </Head>
+
+      {/* Open Graph */}
+      <meta property="og:title" content={Heading} />
+      <meta property="og:description" content={companySlogan} />
+      <meta property="og:image" content="ps://i.postimg.cc/cLjLPgpD/Chat-GPT-Image-Jul-9-2025-01-34-08-AM.png" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="ps://i.postimg.cc/cLjLPgpD/Chat-GPT-Image-Jul-9-2025-01-34-08-AM.png" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={Heading} />
+      <meta name="twitter:description" content={companySlogan} />
+      <meta name="twitter:image" content="ps://i.postimg.cc/cLjLPgpD/Chat-GPT-Image-Jul-9-2025-01-34-08-AM.png" />
+  </Head>
   );
 }
