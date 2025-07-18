@@ -26,7 +26,7 @@ const handleCardClick = (post) => {
   const keyword = post.slug; // 👈 Replace spaces with hyphens
   if (id && keyword) {
     localStorage.setItem('blogId', id); // 👈 store the id in sessionStorage
-    router.push(`/blogpage/${encodeURIComponent(keyword)}`);
+    router.push(`/${encodeURIComponent(keyword)}`);
   }
 };
 
