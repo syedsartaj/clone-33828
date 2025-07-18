@@ -7,10 +7,10 @@ export default function Headertwo({ compname }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/" className="text-xl font-bold">
           {compname}
         </Link>
 
@@ -34,7 +34,7 @@ export default function Headertwo({ compname }) {
         <nav
           className={`${
             isOpen ? 'block' : 'hidden'
-          } md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-gradient-to-r from-blue-600 to-purple-600 md:bg-transparent md:space-x-6 p-4 md:p-0`}
+          } md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-gradient-to-r from-blue-600 to-purple-600 md:bg-transparent md:space-x-6 p-4 md:p-0`}
         >
           <Link href="/contact" className="py-2 md:py-0 hover:text-gray-200 block">
             Services
