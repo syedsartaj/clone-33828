@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     if (!mongoose.connections[0].readyState) {
       await mongoose.connect(mongoUri);
     }
-
+//
     // Find the user by email
     const user = await Client.findOne({ email });
 
