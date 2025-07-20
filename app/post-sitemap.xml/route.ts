@@ -27,7 +27,7 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${rows
   .map(row => {
-    const [id, , ,title , , , ,slug, , , , , robottxt_publish_date] = row;
+    const [id, , ,title , , , , slug, , , , , robottxt_publish_date] = row;
     const editedTitle = title.toLowerCase().replace(/\s+/g, '-');
     return `
   <url>
