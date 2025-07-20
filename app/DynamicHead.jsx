@@ -10,9 +10,8 @@ export default function DynamicHead() {
   // Prevent rendering until data is loaded
   if (loading) return null;
 
-  const headerRow = sheet2Data.find(row => row.Header);
-  const Heading = headerRow?.Heading || 'Smaksly — Build & Deploy Your Website';
-  const companySlogan = headerRow?.companySlogan || 'Smaksly helps you create and launch modern websites effortlessly, including free hosting and SEO tools.';
+  const Heading = sheet2Data.Header || 'Smaksly — Build & Deploy Your Website';
+  const companySlogan = sheet2Data.companySlogan || 'Smaksly helps you create and launch modern websites effortlessly, including free hosting and SEO tools.';
 
   return (
     <Head>
